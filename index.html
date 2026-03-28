@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energized Fitness Point</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0B0B0B;
+color:white;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:center;
+padding:15px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+height:55px;
+}
+
+/* HERO (GYM IMAGE) */
+.hero{
+height:100vh;
+background:url('gym.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+}
+
+.hero-content{
+z-index:2;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.btn{
+padding:14px 30px;
+background:#FFB300;
+border:none;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+}
+
+/* SECTION */
+.section{
+padding:100px 20px;
+text-align:center;
+}
+
+/* LOBBY IMAGE */
+.lobby{
+height:80vh;
+background:url('lobby.jpg') center/cover no-repeat;
+position:relative;
+}
+
+.lobby::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(45deg,#FFB300,#ff8c00);
+color:black;
+padding:80px 20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<img src="logo.jpg" class="logo">
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>Transform Your Body.<br>Build Real Strength.</h1>
+<button class="btn" onclick="contact()">Join Now</button>
+</div>
+</div>
+
+<!-- TEXT -->
+<div class="section">
+<h2>This Isn’t Just a Gym</h2>
+<p>Built for individuals who demand more. No shortcuts. Only discipline.</p>
+</div>
+
+<!-- LOBBY IMAGE -->
+<div class="lobby"></div>
+
+<!-- CTA -->
+<div class="cta">
+<h2>Ready to Change Your Life?</h2>
+<button class="btn" onclick="contact()">Start Now</button>
+</div>
+
+<!-- WHATSAPP -->
+<div class="whatsapp" onclick="contact()">💬</div>
+
+<script>
+function contact(){
+window.location.href="https://wa.me/923203481940";
+}
+</script>
+
+</body>
+</html>
